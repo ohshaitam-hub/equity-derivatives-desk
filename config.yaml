@@ -1,0 +1,34 @@
+# =====================================================================
+# Equity & Derivatives Desk — configuration
+# =====================================================================
+seed: 7
+
+universe:
+  start_date: "2019-01-02"
+  n_days: 1512                 # ~6 ans de jours ouvrés
+
+factors:
+  top_n: 10                    # taille de la shortlist du screener
+
+optimizer:
+  rf_annual: 0.03              # taux sans risque (Sharpe)
+  allow_short: false
+  max_weight: 0.30             # poids max par titre
+
+risk:
+  var_confidence: 0.95
+  horizon_days: 1
+
+options:
+  spot: 100.0                  # indice portefeuille normalisé à 100
+  rf: 0.03
+  base_iv: 0.18
+  skew: 0.15
+  term: 0.05
+  expiries_days: [30, 60, 90, 180, 365]
+
+backtest:
+  rebalance_freq: "Q"          # rebalancement trimestriel
+  top_n: 10
+  lookback_days: 252
+  start_capital: 1000000
