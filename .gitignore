@@ -1,0 +1,16 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# OS / éditeurs
+.DS_Store
+~$*
+.claude/
+
+# Sorties
+outputs/
+
+# Les données sont générées à la volée (cache Streamlit) — rien à committer.
+data/
