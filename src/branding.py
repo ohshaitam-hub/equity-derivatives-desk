@@ -44,4 +44,24 @@ def css() -> str:
   .qd-pill {{ display:inline-block; padding:2px 10px; border-radius:999px;
     background:white; color:{NAVY}; font-size:0.78rem; font-weight:700;
     border:1px solid #cfe0e6; }}
+
+  /* Onglets st.tabs */
+  div[data-baseweb="tab-list"] {{ gap:4px; border-bottom:1px solid #e1e9ef; }}
+  button[data-baseweb="tab"] {{ font-weight:600; color:#5b7286;
+    padding:8px 16px; border-radius:8px 8px 0 0; }}
+  button[data-baseweb="tab"][aria-selected="true"] {{ color:{NAVY};
+    background:{TEAL_LIGHT}; }}
+  div[data-baseweb="tab-highlight"], div[data-baseweb="tab-border"] {{
+    background-color:{TEAL}; }}
+
+  /* Cartes (st.container border=True) */
+  div[data-testid="stVerticalBlockBorderWrapper"] {{ border-radius:12px;
+    border-color:#e1e9ef; }}
+
+  /* Bandeau "live" */
+  .qd-live {{ display:inline-flex; align-items:center; gap:7px; font-weight:700;
+    color:{RED}; font-size:0.9rem; }}
+  .qd-dot {{ width:9px; height:9px; border-radius:50%; background:{RED};
+    animation:qdpulse 1.4s infinite; }}
+  @keyframes qdpulse {{ 0%{{opacity:1}} 50%{{opacity:.25}} 100%{{opacity:1}} }}
 </style>"""
